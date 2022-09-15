@@ -313,11 +313,16 @@ img {
   padding: 10px;
   margin-top: 10px;
   color: #fcfcfc;
-  background-color: rgb(41, 57, 194);
+  background-color: rgb(60, 145, 255);
   border: none;
   border-radius: 5px;
   width: 100%;
   font-size: medium;
+  border-style: none;
+}
+#form button:hover {
+  transition: 0.3s ease-in;
+  background-color: #ff7200;
 }
 
 .inputcontrol {

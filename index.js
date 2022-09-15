@@ -3,15 +3,7 @@ const username =  document.getElementById('username');
 const number = document.getElementById('number')
 const email = document.getElementById('email');
 const enquiry = document.getElementById('enquiry');
-
-const input = document.getElementById('enquiry');
-
-// ✅ Move focus to Beginning of input fiel
-input.setSelectionRange(50, 0);
-input.focus();
-
-
-
+var count   = 0;
 
 
 form.addEventListener('submit',e =>{
@@ -57,43 +49,65 @@ const validateInputs = () =>{
     if(usernameValue === ''){
 
         setError(username , 'Username is required')
+        alert('username is required')
     }else if(usernameValue.length < 5){
         setError(username, 'Username must be at least 5 characters')
+        alert('Username must be at least 5 characters');
     }
     else{
         setSuccess(username)
+        count = count + 1;
     }
 
     if(emailValue === ''){
         setError(email, 'Email is required');
+        alert ('Email is required')
 
     }else if(!isValidEmail(emailValue)){
         setError(email, 'Provide a valid email Address');
+        alert('Provide a valid email Address')
 
     }else{
         setSuccess(email)
+        count =count + 1;
     }
 
     if(numberValue ===''){
         setError(number, 'A phone number is required')
+        alert("A phone number is required")
 
     }else if (numberValue.length < 10){
         setError(number,' Phonenumber must be at least 10 characters')
+        alert("Phonenumber must be at least 10 characters")
+
     }else if(isNaN(numberValue)=== true){
         setError(number, 'Only numbers are allowed')
+        alert("Only numbers are allowed")
     }
     
     else{
         setSuccess(number)
+        count =count + 1 ;
     }
     
 
     if(enquiryValue === ''){
         setError(enquiry, 'An enquiry is required ')
+        alert('An enquiry is required ')
     }else{
         setSuccess(enquiry)
+        alert("Enquiry is a success");
+        count = count + 1;
     }
 
+    if(count >= 4){
+        username.value = "";
+        number.value = "";
+        email.value = "";
+        enquiry.value = "";
+       
+    }
+    
 
     
 }
