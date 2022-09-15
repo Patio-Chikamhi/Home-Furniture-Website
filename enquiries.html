@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Enquiries</title>
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="icon">
+          <h2 class="logo">Home Furniture</h2>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./services.html">SERVICES</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./requirements.html">STEPS TO CREATE A WEBSITE</a></li>
+            <li><a href="./enquiries.html">ENQUIRIES</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <form id="form" action="/">
+        <h1>Enquiries</h1>
+        <div class="inputcontrol">
+          <label for="username">Username</label>
+          <input id="username" type="text" />
+          <div class="error"></div>
+        </div>
+        <div class="inputcontrol">
+          <label for="number">Number</label>
+          <input type="int" name="number" id="number" />
+          <div class="error"></div>
+        </div>
+        <div class="inputcontrol">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" />
+          <div class="error"></div>
+        </div>
+        <div class="inputcontrol1">
+          <label for="enquiry">Enquiry</label>
+          <input type="text" name="enquiry" id="enquiry" size="50px" />
+          <div class="error"></div>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
